@@ -1,0 +1,154 @@
+page-home {
+ 
+  display: block;
+ .hide{
+   display: none;
+  }
+.rosa{
+  color: #EF5350;
+}
+ .toolbar-background-md{
+   background: linear-gradient(215deg, rgba(198,40,40,1) 0%, rgba(239,83,80,1) 100%);
+  }
+  .toolbar-title-md{
+    color: #ffffff;
+  }
+  .scroll-content{background-color: #FCF8F9;
+  // background-image: url('../assets/img/sfondointero.svg');
+   // background-position: center center;
+   //   background-repeat: no-repeat;
+   //   background-size: cover;
+    }
+  .card-md{
+    border-radius: 13px;
+  }
+  .card-md ion-card-header{
+    border-bottom: solid 1px #EFEFEF;
+  }
+   .card-md ion-card-content{
+    border-bottom: solid 1px #EFEFEF;
+
+    padding-left: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+  }
+  /*.foto{
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    border:solid 3px #fff;
+    margin: 0 auto;
+    overflow: hidden;
+    background-size: cover;
+
+    
+  }*/
+  .foto{
+    width: 100%;
+    height: 200px;
+
+  }
+ 
+ .nome h2{
+   margin: 0 auto;
+ }
+ .gestisci{
+   color: #808080; 
+   font-size: 15px;
+   height: auto;
+  }
+ .gestisci p{
+   font-size: 10px;
+  }
+ .resoconto{
+   padding-left: 16px; 
+   padding-top: 6px;
+   padding-bottom: 6px;
+  }
+.titolo{
+  width: 95%;
+  margin: 0px;
+  font-weight: bold
+}
+.opzioni{
+  color: #808080;
+  background-color: transparent;
+  padding: 0px;
+}
+.opzioni ion-icon{
+  font-size: 12px;
+}
+
+#elimina{
+  background-color:#EF5350
+}
+#modifica{
+  background-color: #29ABE2
+}
+.item-pipi{
+  border-left: 3px solid #F9E178;
+}
+.item-pupu{
+  border-left: 3px solid #F7A537;
+
+}
+.paws{
+  width:auto;
+  height:100%;
+  margin:0 auto;
+  background-image: url('../assets/img/paws.gif');
+  background-size: contain;
+  background-position: center center;
+  position: absolute;
+  left:0px;
+  right: 0px;
+}
+ion-item-sliding button{
+  width: 45px;
+}
+
+.swiper-pagination-bullet-active{
+  background: #EF5350
+}
+.no-border{
+  border: none
+}
+ion-item-sliding{
+  border-bottom: solid 1px #FCF8F9;
+}
+
+
+ion-card.cani{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.list-md > .item-block:first-child, .list-md > .item-wrapper:first-child .item-block{
+  border: none
+}
+.lista.card-md ion-card-content {
+  border-bottom: none;
+}
+.calendario{
+  background-color: #FCF8F9;
+}
+.calendario.item-md.item-block .item-inner{
+  border-bottom: 0px;
+}
+#aggiungicane{
+  color: #fff
+}
+#addCane{
+  z-index: 10;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+ion-card-content.cani h2{
+  font-size: 24px;
+}
+ion-card-content.cani h3{
+  font-size: 20px;
+}
+}

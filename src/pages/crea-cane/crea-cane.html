@@ -1,0 +1,89 @@
+<!--
+  Generated template for the CreaCanePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Crea il tuo cane</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+        <div class="foto" *ngIf="!captureDataUrl"></div>
+        <div class="foto" [style.background-image]="'url(' + captureDataUrl + ')'" [ngStyle]="{  'background-size': 'cover','background-repeat': 'no-repeat','background-position': 'center center'} " *ngIf="captureDataUrl"></div>
+           
+                <button ion-button (click)="capture()" class="fotocamera"><ion-icon name="camera"></ion-icon></button>
+              
+        
+  
+  
+    <ion-card>
+        <ion-card-header>
+            Ricorda di compilare tutti i campi
+        </ion-card-header>
+        <ion-card-content>
+           <ion-list> 
+              <ion-item>
+                  <ion-label  floating>Nome</ion-label>
+              <ion-input [(ngModel)]="caneName" type="text"
+             required>
+              </ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label  floating>Razza</ion-label>
+                  <ion-input [(ngModel)]="caneRazza" type="text"
+                  required>
+                  </ion-input>
+              </ion-item>
+              <ion-item>
+                  <ion-label  floating>Genere</ion-label>
+                  <ion-select type="text"
+                  placeholder="Genere"
+                  [(ngModel)]="caneGenere"
+                  >
+                      <ion-option value="femmina" >Femmina</ion-option>
+                      <ion-option value="maschio" >Maschio</ion-option>
+                  </ion-select>
+              </ion-item>
+              <ion-item>
+                  <ion-label  floating>Data di nascita</ion-label>
+                  <ion-datetime displayFormat="D MMMM YYYY" pickerFormat="D MMMM YYYY"
+                  monthNames="Gennaio,Febbraio,Marzo,Aprile,Maggio,Giugno,Luglio,Agosto,Settembre,Ottobre,Novembre,Dicembre"
+             [(ngModel)]="caneDate"  required>
+              </ion-datetime>
+              </ion-item>
+              <ion-item>
+                  <ion-label  floating>CHIP</ion-label>
+                  <ion-input type="number"  [(ngModel)]="caneChip"
+                  ></ion-input>
+              </ion-item>
+              <ion-item>
+                  <ion-label stacked>Peso: {{canePeso}} Kg</ion-label>
+                  <ion-range pin="true" min="0" max="60" color="primary"  [(ngModel)]="canePeso">
+                      <ion-label range-left>0kg</ion-label>
+                      <ion-label range-right>60kg</ion-label>
+                    </ion-range>
+              </ion-item>
+              <ion-item>
+                  <ion-label stacked>Altezza al garrese: {{caneAltezza}} Cm</ion-label>
+                  <ion-range pin="true" min="0" max="150" color="secondary"  [(ngModel)]="caneAltezza">
+                      <ion-label range-left>0cm</ion-label>
+                      <ion-label range-right>150cm</ion-label>
+                    </ion-range>
+              </ion-item> 
+              
+           </ion-list> 
+        </ion-card-content>      
+    </ion-card>
+    <button ion-button class="crea" full block color="danger"
+    (click)="createCane(caneName, caneRazza, caneGenere, caneDate, caneChip, canePeso, caneAltezza,captureDataUrl)">
+    CREA
+    </button>
+  
+</ion-content>

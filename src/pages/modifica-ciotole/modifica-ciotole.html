@@ -1,0 +1,101 @@
+<!--
+  Generated template for the ModificaCiotolePage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    
+      <ion-navbar >
+        <ion-title>Modifica ciotole</ion-title> 
+        <ion-buttons end>
+          <button ion-button icon-only (click)="closeModal()" color="light">
+          <ion-icon name="close"></ion-icon>
+          </button>
+          </ion-buttons>
+       
+      </ion-navbar>
+    
+    </ion-header>
+    
+    
+    <ion-content >
+     
+      <!-- Acqua -->   
+    <ion-card >
+     <ion-card-header >
+      
+    
+              <p class="titolo">Acqua<br>
+              </p> <p>Seleziona il tuo obiettivo giornaliero.</p>
+    
+    
+     </ion-card-header>
+     <ion-card-content>
+        <ion-row class="padding"><br>
+           <p class="centrato">Ciotole giornaliere<br><span class="numero" *ngIf="currentImpo.Acqua==ciotoleAcqua">{{currentImpo.Acqua}}</span> <span class="numero" *ngIf="currentImpo.Acqua!==ciotoleAcqua">{{ciotoleAcqua}}</span></p>
+         </ion-row>    
+        
+            <ion-row>  
+                <button ion-item  small class="ciotola">
+                    <img src="assets/img/ciotola-acqua-vuota.svg" height="40px;" width="auto">
+                </button> 
+               
+             </ion-row>      
+    <ion-row>
+      <ion-item class="ciotola">
+                   
+        <ion-range  min="1" max="10"class="acqua" step="1"  [(ngModel)]="ciotoleAcqua"  >
+          <ion-label range-left>1</ion-label>
+        
+          <ion-label range-right>10</ion-label>
+        </ion-range>
+       </ion-item>
+      
+    </ion-row>
+         
+      </ion-card-content>
+    
+    
+    </ion-card>
+      <!-- Pappa -->   
+    <ion-card >
+     <ion-card-header >
+      
+    
+              <p class="titolo">Cibo<br>
+              </p> <p>Seleziona il tuo obiettivo giornaliero.</p>
+    
+    
+     </ion-card-header>
+     <ion-card-content>
+        <ion-row class="padding"><br>
+          <p class="centrato">Ciotole giornaliere<br><span class="numero" *ngIf="currentImpo.Pappa==ciotolePappa">{{currentImpo.Pappa}}</span> <span class="numero" *ngIf="currentImpo.Pappa!==ciotolePappa">{{ciotolePappa}}</span></p>
+          
+         </ion-row>    
+        
+            <ion-row>  
+                <button ion-item  small class="ciotola">
+                    <img src="assets/img/pappa-piena.svg" height="60px;" width="auto">
+                </button> 
+               
+             </ion-row>      
+    <ion-row>
+      <ion-item class="ciotola">
+                   
+        <ion-range class="pappa" min="1" max="5" step="1" [(ngModel)]="ciotolePappa"  >
+          <ion-label range-left>1</ion-label>
+        
+          <ion-label range-right>5</ion-label>
+        </ion-range>
+       </ion-item>
+      
+    </ion-row>
+         
+      </ion-card-content>
+    
+    
+    </ion-card>     
+    <button ion-button full block  (click)="addCiotole(ciotoleAcqua,ciotolePappa)">Salva nuove impostazioni</button>
+    </ion-content>
+    

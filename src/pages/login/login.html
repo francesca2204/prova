@@ -1,0 +1,54 @@
+
+
+<ion-content class="login"  >
+<div class="prova">
+
+<ion-item class="logo"></ion-item>
+  
+<p class="bianco">Hai già un Account registrato?</p>
+  
+  <form [formGroup]="loginForm" (submit)="loginUser()" novalidate>
+
+    <ion-item class="input">
+     
+      <ion-input formControlName="email" type="email" placeholder="E-Mail" 
+        [class.invalid]="!loginForm.controls.email.valid && loginForm.controls.email.dirty"></ion-input>
+    </ion-item>
+    <ion-item class="error-message" 
+      *ngIf="!loginForm.controls.email.valid  && loginForm.controls.email.dirty">
+      <p>Inserire una e-mail valida.</p>
+    </ion-item>
+
+    <ion-item class="input">
+      
+      <ion-input formControlName="password" type="password" placeholder="Password" 
+        [class.invalid]="!loginForm.controls.password.valid && loginForm.controls.password.dirty"></ion-input>
+    </ion-item>
+    <ion-item class="error-message" 
+      *ngIf="!loginForm.controls.password.valid  && loginForm.controls.password.dirty">
+      <p>La password deve contenere almeno 6 caratteri.</p>
+    </ion-item>
+<br>
+    <button ion-button block type="submit" [disabled]="!loginForm.valid" id="entra">
+     Accedi
+    </button>
+
+  
+    <button ion-button block clear (click)="goToResetPassword()" class="dimenticatoPass">
+      Password dimenticata?
+    </button>
+  
+</form>
+
+<div id="primoAcc">
+   <p id="titoletto-rosso"> Prima volta che utilizzi questa App?</p>
+ <button ion-button block clear full (click)="goToTutorial()" class="primoAccesso" >
+    
+      PRIMO ACCESSO
+    </button>
+
+</div>
+</div>
+</ion-content>
+
+

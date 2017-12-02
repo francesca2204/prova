@@ -1,0 +1,249 @@
+<!--
+  Generated template for the CaneDettPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar >
+    <ion-title>Diario di {{currentCane?.name}}</ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="gestisci()" color="light">
+        <ion-icon name="settings"></ion-icon>
+        </button>
+        </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  
+  
+  <div class="trasparente">
+     
+      
+        <ion-row>
+          <div class="foto" [style.background-image]="'url(' + currentCane.foto + ')'" [ngStyle]="{  'background-size': 'cover','background-repeat': 'no-repeat','background-position': 'center center'} "  (click)="ProfiloCane(currentCane.id)"></div>
+        </ion-row>
+        <ion-row>
+            
+              <p class="centrato">
+           <strong> {{currentCane?.name}}</strong><br>
+              <span> Nata il {{currentCane?.date}}</span></p>
+             <!--   <button   (click)="ProfiloCane(currentCane.id)">Profilo</button>-->
+            
+           
+  <!--   <button   (click)="eliminaCane()">elimina</button>-->
+            
+        </ion-row>
+   
+  </div>
+<!---->
+<ion-item class="data">
+    <ion-label><ion-icon name="calendar"> </ion-icon> Calendario attivita </ion-label>
+    <ion-datetime displayFormat="DD MMMM YYYY" 
+      pickerFormat="DD-MMMM-YYYY" 
+      monthNames="Gennaio,Febbraio,Marzo,Aprile,Maggio,Giugno,Luglio,Agosto,Settembre,Ottobre,Novembre,Dicembre"
+     [max]="today"
+     min="2017-05-10"
+      cancelText="Annulla"  
+      doneText="invia" [(ngModel)]="data" 
+      placeholder="{{data}}"  
+      (ionChange)="cambiaData(data)"
+       >
+    </ion-datetime>
+  </ion-item>
+  <!-- pappa -->
+  
+ 
+<ion-card class="lista" [class.hide]="acqua==false">
+  <ion-card-header >
+     <ion-row>
+       <ion-col>
+           <p class="titolo">Acqua</p> 
+       </ion-col>  
+       <ion-col id="right">
+         <button icon-right clear class="opzioni" (click)="modificaCiotole()">Impostazioni<ion-icon name="options"></ion-icon></button>
+       </ion-col>    
+     </ion-row>   
+  </ion-card-header>
+  <ion-card-content >
+ 
+   
+    <ion-row >
+      <div *ngFor="let bere of bereList; let i = index; let lst = last" class="ciotoleAcqua" (click)="eliminaAcqua()" >
+          
+              
+                <ion-input  style="display:none" id="mio" [(ngModel)]="bereId"  type="text"  value="{{bere.Id}}"></ion-input>
+           
+            
+          <img src="assets/img/ciotola-acqua-piena.svg" >
+          <ion-row style="height:5px;">
+              <span class="hide"> {{i+1}}</span><ion-icon name="ios-ribbon" color="primary" style="margin-top:-12px;margin-right:2px" class="obiettivoA" *ngIf="i==ciotoleAcqua-1"></ion-icon>
+          </ion-row>
+      </div>
+      <div (click)="addBere()" class="ciotoleAcquaAgg">
+        <img src="assets/img/ciotola-acqua-vuota.svg" >
+        <ion-row style="height:5px;">
+            
+         </ion-row>
+      </div>
+    
+    </ion-row>
+   
+   
+  </ion-card-content>
+<ion-row class="foot">
+ <p> Obiettivo : <strong>{{ciotoleAcqua}} ciotole d'acqua.</strong></p>
+</ion-row>
+ </ion-card>
+ <!--/pappa-->
+ <ion-card class="lista" [class.hide]="pappa==false">
+  <ion-card-header >
+     <ion-row>
+       <ion-col>
+           <p class="titolo">Pappa</p> 
+       </ion-col>  
+       <ion-col id="right">
+         <button icon-right clear class="opzioni" (click)="modificaCiotole()">Impostazioni<ion-icon name="options"></ion-icon></button>
+       </ion-col>    
+     </ion-row>   
+  </ion-card-header>
+  <ion-card-content>
+ 
+    <ion-row>
+        <div *ngFor="let pappa of pappaList; let i = index; let lst = last " class="ciotolePappa" (click)="eliminaPappa()">
+            
+       
+                  <ion-input  style="display:none" id="mio" [(ngModel)]="pappaId"  type="text"  value="{{pappa.Id}}"></ion-input>
+                  
+              
+            <img src="assets/img/pappa-piena.svg" >
+            <ion-row style="height:5px;">
+                <span class="hide"> {{i+1}}</span><ion-icon name="ios-ribbon"  style="margin-top:-15px;margin-right:10px;" class="obiettivo" *ngIf="i==ciotolePappa-1"></ion-icon>
+            </ion-row>
+          
+        </div>
+        <div (click)="addMangiare()" class="ciotolePappaAgg">
+            
+          <img src="assets/img/pappa-vuota.svg" >
+          <ion-row style="height:5px;">
+              
+           </ion-row>
+        </div>
+      
+     
+    
+    </ion-row>
+   
+  
+ 
+  </ion-card-content>
+  <ion-row class="foot" >
+      <p> Obiettivo : <strong>{{ciotolePappa}} ciotole di cibo.</strong>  </p>
+     </ion-row>
+ </ion-card>
+ <!--/pappa-->
+ <!-- Bisogni -->   
+
+<ion-card class="lista" [class.hide]="bisogni==false">
+ <ion-card-header >
+    <ion-row>
+      <ion-col>
+          <p class="titolo">Bisogni</p> 
+      </ion-col>  
+      <ion-col id="right">
+        <button icon-right clear class="opzioni" (click)="presentBisogniModal()">Aggiungi<ion-icon name="add"></ion-icon></button>
+      </ion-col>    
+    </ion-row>   
+ </ion-card-header>
+ <ion-card-content>
+  
+  <ion-list no-lines>
+
+    <ion-item-sliding #item *ngFor="let attivita of attivitaList "  ngClass="{{attivita.tipo}}"  >
+        <ion-row style="display:none">
+            
+              <ion-input id="mio" [(ngModel)]="bisognoId"  type="text"  value="{{attivita.Id}}"></ion-input>
+         
+          </ion-row>
+      <ion-item >
+        <ion-row>
+         <ion-col> 
+            
+             <div hidden>{{attivita.data}}</div>
+             <p class="capitalize" ><strong>{{attivita.tipo}}</strong></p>
+         </ion-col>
+         <ion-col align-items-end id="right">
+             <p>Alle ore: <strong>{{attivita.ora}}</strong></p>
+         </ion-col>
+
+        </ion-row>
+       
+      </ion-item>
+      <ion-item-options side="right">
+        <button ion-button id="elimina"  (click)="elimina()"><ion-icon name="trash"></ion-icon><span></span></button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+ </ion-card-content>
+
+</ion-card>
+<!-- passeggiata -->
+  
+ 
+ <ion-card class="lista" [class.hide]="passeggiata==false">
+    <ion-card-header >
+       <ion-row>
+         <ion-col>
+             <p class="titolo">Passeggiata</p> 
+         </ion-col>  
+         <ion-col id="right">
+           <button icon-right clear class="opzioni" (click)="presentPasseggiataModal()">Aggiungi<ion-icon name="add"></ion-icon></button>
+         </ion-col>    
+       </ion-row>   
+    </ion-card-header>
+    <ion-card-content>
+   
+     <ion-list no-lines>
+   
+       <ion-item-sliding #item *ngFor="let passeggiata of passeggiataList "    >
+          <ion-row style="display:none" >
+              
+                <ion-input id="mio" [(ngModel)]="passeggiateId"  type="text"  value="{{passeggiata.Id}}"></ion-input>
+           
+            </ion-row>
+         
+         <ion-item >
+            
+           <ion-row>
+            <ion-col> 
+               
+                <div hidden>{{passeggiata.data}}</div>
+                <p class="capitalize" > <ion-icon name="paw" style="color:#006837;margin-right:4px;margin-left:0px;"></ion-icon> <strong> Durata: {{passeggiata.durata}}</strong></p>
+            </ion-col>
+            <ion-col align-items-end id="right">
+                <p>Alle ore: <strong>{{passeggiata.ora}}</strong></p>
+            </ion-col>
+   
+           </ion-row>
+          
+         </ion-item>
+         <ion-item-options side="right">
+           <button ion-button id="elimina"  (click)="eliminaPasseggiata()"><ion-icon name="trash"></ion-icon><span></span></button>
+         </ion-item-options>
+       </ion-item-sliding>
+     </ion-list>
+   
+    </ion-card-content>
+   
+   </ion-card>
+   <!--fine passeggiata-->
+
+<!--gestisci elementi -->
+
+
+</ion-content>

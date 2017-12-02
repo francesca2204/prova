@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-navbar >
+      <ion-title>
+      Primo Cane
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <p class="normale">Nessun amico è ancora presente,
+  usa il tasto <span class="mark">“Aggiungi”</span> per inserirne uno.
+  </p>
+  <ion-item class="logo"></ion-item>
+  <!--<img src="../../assets/img/aggiungicane.svg"  class="aggiungicane">-->
+  
+  <p class="normale">Dopo il primo amico inserito potrai inserirne di nuovi grazie al pulsante <ion-icon name="paw" ></ion-icon> in basso a destra nella Home Page.</p>
+  <!--  <button ion-button color="positive" block (click)="logMeOut()">
+      Log Me Out Please
+    </button>-->
+    <button ion-button full color="light" block id="aggiungi" (click)="goToCreation()" canSwipeBack="false">Aggiungi</button>
+  </ion-content>
+  

@@ -1,0 +1,8 @@
+{
+  "name": "HiPawsDogs",
+  "app_id": "ce2a8c89",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

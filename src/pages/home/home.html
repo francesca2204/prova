@@ -1,0 +1,65 @@
+<ion-header>
+<ion-navbar>
+<ion-title>I tuoi cani</ion-title>
+<ion-buttons end>
+<button ion-button icon-only (click)="goToProfile()">
+<ion-icon name="person" color="light"></ion-icon>
+</button>
+</ion-buttons>
+</ion-navbar>
+
+
+</ion-header>
+
+<ion-content>
+  
+  
+    <ion-slides pager >
+  
+        <div *ngIf="!caniList" class="paws">
+          
+        </div>
+       
+          <ion-slide  *ngFor="let cane of caniList"
+          (click)="goCaneDett(cane.id)" >
+          
+          <ion-card class="cani"  >
+              <div class="foto" [style.background-image]="'url(' + cane.foto + ')'" [ngStyle]="{  'background-size': 'cover','background-repeat': 'no-repeat','background-position': 'center center'} "></div>
+              
+              
+            
+            <ion-card-content class="cani">
+              <ion-row class="nome">
+                  <h2> <strong>{{cane?.name}}</strong>
+                  <br> {{cane?.razza}}</h2>
+
+                
+                
+                </ion-row>
+              
+            </ion-card-content>
+
+          </ion-card>
+        
+         
+         
+          </ion-slide>
+        
+        
+        </ion-slides>
+   <!-- <ion-list>
+        <ion-item *ngFor="let cane of caniList"
+        (click)="goCaneDett(cane.id)">
+        <h2>Nome: <strong>{{cane?.name}}</strong></h2>
+        <p>Razza: <strong>{{cane?.razza}}</strong></p>
+        
+        </ion-item>
+        </ion-list>-->
+        <button ion-fab color="danger" (click)="goToCreate()" id="addCane"><ion-icon name="paw" ></ion-icon></button>
+<!--<button ion-button block color="primary" (click)="goToList()">
+See your events
+</button>-->
+    
+ 
+
+  </ion-content>

@@ -1,0 +1,53 @@
+crea-cane {
+
+   
+    
+        .scroll-content{padding: 0px;background-color: #FCF8F9;}
+        
+        .hide{display: none;}
+        
+        .toolbar-background-md{background: linear-gradient(215deg, rgba(198,40,40,1) 0%, rgba(239,83,80,1) 100%);
+        /* w3c */}
+        .toolbar-title-md{color: #ffffff;}
+        .scroll-content{background-color: #FCF8F9}
+       
+      
+           ion-card-content.card-content.card-content-md{padding: 0px 0px 0px 0px;}
+        
+
+        
+        .no-border{border: none;}
+        
+    .fotocamera{
+        right: 100px;top: 110px;position: absolute;border-radius: 100%;width: 55px;height: 55px;
+    }
+    
+        
+       button.back-button.bar-button.bar-button-md{color:#fff}
+     
+        .item-md{border-bottom: solid 1px #FCF8F9;padding-right:16px; }
+        
+       
+        p.capitalize{text-transform: capitalize;}
+        
+        #right{text-align: right; }
+        
+        .foto{
+            width: 160px;
+            height: 160px;
+            margin: 0 auto;
+            border-radius: 100%;
+            border: 3px solid #FFFFFF;
+            margin-top: 10px;
+           
+            background-image: url('../assets/img/aggiungiFoto.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            -webkit-box-shadow: -2px -1px 7px 0px rgba(0,0,0,0.13);
+            -moz-box-shadow: -2px -1px 7px 0px rgba(0,0,0,0.13);
+            box-shadow: -2px -1px 7px 0px rgba(0,0,0,0.13);
+        }
+        
+       
+}

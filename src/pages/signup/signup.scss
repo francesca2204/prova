@@ -1,0 +1,131 @@
+page-signup {
+  form {
+    margin-bottom: 32px;
+    button { margin-top: 20px; }
+  }
+
+  p {
+    font-size: 0.8em;
+    color: #d2d2d2;
+  }
+
+  ion-label { margin-left: 5px; }
+
+  ion-input { padding: 5px; }
+
+  .invalid { border-bottom: 1px solid #FF6153; }
+
+  .error-message .item-inner { border-bottom: 0 !important; }
+  .prova{
+    padding-top: 6%;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../assets/img/sfondointero.svg');
+        background-position: center center;
+          background-repeat: no-repeat;
+          background-size: cover;
+
+  }
+          .scroll-content{margin-bottom: 0px;
+          }
+  #titoletto-rosso{
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration:none;
+    color: #B71C1C;
+    margin: 0px;
+    left: 0px;right: 0px;
+    
+  }
+        
+
+  p {
+      font-size: 1em;
+      text-align: center;
+      color: #ffffff;
+
+    }
+  form{
+    
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+    
+
+
+
+
+  .invalid {
+      border-bottom: 1px solid #FF6153;
+    }
+  .logo{
+      background-color: rgba(0,0,0,0);
+      background-image: url(../assets/img/logo.svg);
+      background-repeat: no-repeat;
+      width: 100%;height: 100px;
+      background-size: contain;
+      background-position: center;margin-bottom: 20px;margin-top: 0px;
+    }
+  .logo.item-md.item-block .item-inner{border-bottom: 0px; padding:0px;margin-top: 0px;margin-bottom:0px;}
+    #entra{
+      background-color: #ffffff;border-radius: 10px;height: 40px;text-align: center;margin: 0 auto;color: #B71C1C;font-size: 20px;
+    }
+
+  .error-message .item-inner {
+      border-bottom: 0 !important;
+    }
+  .input-cover{position: static;}
+  .item-md.item-block .item-inner{padding-right: 0px;border-bottom: 1px solid lightgray}
+  .input{
+  background-color:#fff; color: #000; border-radius: 6px;}
+  
+  ion-item.input{margin-bottom: 6px;}
+  .item-ios.item-block .item-inner{border-bottom: 0px;}
+
+  .linea{
+    height: 9px;
+    width: 30px;
+    border-bottom: solid 1px #ffffff;
+    vertical-align:middle;
+
+  }
+  button.primoAccesso{
+    color: #B71C1C;
+    position: static;
+    left: 0px;right: 0px;
+    margin: 0px;
+    font-size: 2rem;}
+    
+    
+  #primoAcc{
+  
+  width: 100%;
+  height: 20vh;
+  margin-top: 20%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 17%;
+  background-image: url('../assets/img/button.svg');
+  position: static;
+
+
+    
+  }
+    
+    
+  
+  .dimenticatoPass{
+    
+    color: #ffffff;
+    font-size: 1.2rem;
+
+    
+    
+  }
+  p.rosso{
+    color: #B71C1C;
+
+  }
+  .item-md{padding-left: 0px;}
+}

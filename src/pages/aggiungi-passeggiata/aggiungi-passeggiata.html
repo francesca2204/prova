@@ -1,0 +1,51 @@
+<!--
+  Generated template for the BisogniPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-navbar class="modal-wrapper" *navbar>
+    <ion-title>Sample Modal</ion-title>
+  </ion-navbar>
+  <ion-content padding class="sample-modal-page">
+    <ion-card class="add-attivita-form">
+    <ion-card-header style="text-align:center">
+      Aggiungi Passeggiata
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list no-lines>
+        <ion-item style="display:none">
+         
+          <ion-datetime hidden [(ngModel)]="passeggiataData" displayFormat="DD/MM/YY" pickerFormat="DD/MM/YY" 
+            ></ion-datetime>
+        </ion-item>
+        <ion-item>
+            
+            <ion-label stacked>A che ora?</ion-label>
+          <ion-datetime [(ngModel)]="passeggiataOra" displayFormat="HH:mm" pickerFormat="HH:mm"
+            placeholder="A che ora?"></ion-datetime>
+        </ion-item>
+        <ion-item>
+            
+            <ion-label stacked>Durata della passeggiata</ion-label>
+          <ion-datetime [(ngModel)]="passeggiataDurata" displayFormat="HH:mm" pickerFormat="HH:mm"
+            placeholder="Durata"></ion-datetime>
+        </ion-item>
+     
+       
+      </ion-list>
+        <ion-row>
+          <ion-col>
+              <button ion-button color="danger" block  (click)="dismiss()">Annulla</button>
+            </ion-col>
+          
+          <ion-col>
+              <button ion-button color="primary" block (click)="addPasseggiata(passeggiataData, passeggiataOra, passeggiataDurata)">
+                  Aggiungi
+                </button>
+              </ion-col>
+        </ion-row>
+    </ion-card-content>
+  </ion-card>
+  
+  </ion-content>

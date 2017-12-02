@@ -1,0 +1,45 @@
+
+
+
+<ion-content class="login">
+  <div class="prova">
+    <ion-item class="logo"></ion-item>
+    <p class="bianco">Crea il tuo Account</p>
+  <form [formGroup]="signupForm" (submit)="signupUser()" novalidate>
+
+    <ion-item class="input">
+   
+      <ion-input formControlName="email" type="email" placeholder="E-Mail" 
+        [class.invalid]="!signupForm.controls.email.valid && signupForm.controls.email.dirty">
+      </ion-input>
+    </ion-item >
+    <ion-item class="error-message" 
+      *ngIf="!signupForm.controls.email.valid  && signupForm.controls.email.dirty">
+      <p>Inserire una e-mail valida.</p>
+    </ion-item>
+
+    <ion-item class="input">
+     
+      <ion-input formControlName="password" type="password" placeholder=" password" 
+        [class.invalid]="!signupForm.controls.password.valid && signupForm.controls.password.dirty">
+      </ion-input>
+    </ion-item>
+    <ion-item class="error-message" 
+      *ngIf="!signupForm.controls.password.valid  && signupForm.controls.password.dirty">
+      <p>La password deve contenere almeno 6 caratteri.</p>
+    </ion-item>
+
+    <button ion-button block type="submit" [disabled]="!signupForm.valid" id="entra">
+     Crea Account
+    </button>
+  </form>
+  <div id="primoAcc">
+      <p id="titoletto-rosso"> Hai già un Account registrato?</p>
+    <button ion-button block clear full (click)="goToLogin()" class="primoAccesso" >
+       
+         ACCEDI
+       </button>
+     
+   </div>
+</div>
+</ion-content>

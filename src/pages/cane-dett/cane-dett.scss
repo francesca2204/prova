@@ -1,0 +1,104 @@
+page-cane-dett {
+        display: block;
+ .hide{display: none;}
+ 
+ .foto{
+   width: 110px;height: 110px;border-radius: 100%;margin:0 auto;border: solid 1px #fff;
+ }
+
+ .toolbar-background-md{background: #C62828;
+  /* w3c */}
+  .toolbar-title-md{color: #ffffff;}
+  .scroll-content{background-color: #FCF8F9}
+  .card-md{border-radius: 13px;}
+  .card-md ion-card-header{
+    border-bottom: solid 1px #EFEFEF;
+  }
+   .card-md ion-card-content{
+    border-bottom: solid 1px #EFEFEF;
+    padding: 0px;
+  }
+ .trasparente{ background-image: url('../assets/img/sfondomezzo.png');
+   background-position: center center;
+    background-repeat: no-repeat;
+  background-size: cover;box-shadow: none;padding: 2%;height: 200px;
+color: #fff}
+p.centrato{margin: 0 auto; text-align: center;padding-top: 10px;font-size: 1.6rem;}
+ .gestisci{color: #808080; font-size: 15px;height: auto;}
+ .gestisci p{font-size: 10px;}
+ .resoconto{padding-left: 16px; padding-top: 6px;padding-bottom: 6px;}
+  .titolo{width: 75%;margin: 0px;font-weight: bold}
+  .opzioni{color: #808080;padding: 0px;background-color:transparent }
+  .opzioni ion-icon{font-size: 12px;font-weight: bold}
+  .card-header-md{padding:6px;
+  }
+  #elimina{background-color:#EF5350;border-radius: 0px 0px 10px 0px;
+  }
+  #modifica{background-color: #29ABE2}
+  .pipi{border-left: 3px solid #F9E178;
+  }
+  .pupu{border-left: 3px solid #F7A537;
+
+  }
+  button.back-button.bar-button.bar-button-md{color:#fff}
+  ion-item-sliding button{width: 60px;}
+
+  ion-item-sliding { border-top: solid 1px #EFEFEF;}
+
+  .no-border{border: none;}
+
+
+  .list-md > .item-block:first-child, .list-md > .item-wrapper:first-child .item-block{border: none;}
+.card-md ion-card-content{border-bottom:none}
+  .lista.card-md ion-card-content {border-bottom: none;}
+
+  .foot{border-top: 1px solid #FCF8F9; padding: 6px;}
+
+  .calendario.item-md.item-block .item-inner{border-bottom: 0px;}
+
+  p.capitalize{text-transform: capitalize;}
+
+  #right{text-align: right}
+  .item-md.item-block .item-inner{
+    border-bottom:none;
+    
+  }
+  
+  .datetime-md{padding-left: 0px;
+    margin: 0 auto;
+  }
+.item-md{
+  background-color: transparent;
+}
+  .centrato span{font-size: 14px;}
+  .input-wrapper{
+    height: 40px;
+  }
+  .tutto{
+    border-left: 3px solid #229424
+  }
+  .ciotolePappa{
+    padding: 7px;align-items: center;margin: 0 auto;float: left;
+    width:25%;height:auto;margin:0 auto; opacity: 1
+}
+.ciotolePappaAgg{
+  padding: 7px;align-items: center;margin: 0 auto;float: left;
+  width:25%;height:auto;margin:0 auto; opacity: 0.5
+}
+.ciotoleAcqua{
+  padding: 7px;align-items: center;float: left;
+  width:20%;height:auto; opacity: 1;
+}
+.ciotoleAcquaAgg{
+  padding: 7px;align-items: center;float: left;
+  width:20%;height:auto; opacity: 0.5;
+}
+.gestisci{color: #808080; font-size: 15px;height: auto;height: 70px;margin-top: 10px;}
+.gestisci p{font-size: 20px;}
+.obiettivo{
+  font-size:24px;margin: 0 auto;color:#F7A537;
+}
+.obiettivoA{
+  font-size:24px;margin: 0 auto;color:#3A8B46;
+}
+}

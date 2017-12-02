@@ -1,0 +1,56 @@
+page-profilo-cane {
+  
+.scroll-content{padding: 0px;}
+
+    display: block;
+.hide{display: none;}
+
+.toolbar-background-md{background: linear-gradient(215deg, rgba(198,40,40,1) 0%, rgba(239,83,80,1) 100%);
+/* w3c */}
+.toolbar-title-md{color: #ffffff;}
+.scroll-content{background-color: #FCF8F9}
+.card-md{border-radius: 13px;}
+.card-md ion-card-header{
+border-bottom: solid 1px #EFEFEF;
+}
+.card-md ion-card-content{
+border-bottom: solid 1px #EFEFEF;
+padding: 0px;
+}
+
+.back-button .bar-button .bar-button-md .back-button-md .bar-button-default .bar-button-default-md .show-back-button{
+    color:#ffffff
+}
+
+
+.no-border{border: none;}
+
+
+.lista.card-md ion-card-content {border-bottom: none;}
+.item{border-bottom: solid 1px #EFEFEF;}
+
+.item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner{
+    border-bottom: none;
+    box-shadow: inset 0 -1px 0 0 #fff;
+}
+
+
+p.capitalize{text-transform: capitalize;}
+
+#right{text-align: right}
+
+.foto{
+    width: 160px;
+    height: 160px;
+    border-radius: 100%;
+    margin: 0 auto;
+    border: solid 3px #fff;
+    -webkit-box-shadow: -2px -1px 7px 0px rgba(0,0,0,0.13);
+    -moz-box-shadow: -2px -1px 7px 0px rgba(0,0,0,0.13);
+    box-shadow: -2px -1px 7px 0px rgba(0,0,0,0.13);
+    margin-top: 10px;
+ 
+}
+button.back-button.bar-button.bar-button-md{color:#fff}
+.datetime-disabled, .item-datetime-disabled ion-label{opacity: 1;}
+}

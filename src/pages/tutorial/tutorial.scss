@@ -1,0 +1,72 @@
+page-tutorial {
+    [padding] .scroll-content{padding: 8%;}
+    .scroll-content{
+      
+       background-image: url('../assets/img/sfondointero.svg');
+     
+           background-size: cover;
+           background-position: center center;
+           background-repeat: no-repeat;
+           background-attachment: fixed;
+           top: 0px;bottom: 0px;left: 0px;right: 0px;
+      
+   
+    }
+    p {
+       font-size: 1em;
+       text-align: center;
+       color: #ffffff;
+   
+     }
+     .swiper-pagination-bullet-active{background: #EF5350}
+     .primoAccesso{
+      color: #B71C1C;
+      position: absolute;
+      bottom:4%;
+      left: 0px;
+      right: 0px;
+       font-size: 2rem;
+      
+    }
+    .dimenticatoPass{
+      position: absolute;
+      bottom:22%;
+      left: 0px;
+      right: 0px;
+      color: #ffffff;
+      font-size: 1.2rem;
+     
+      
+    }
+    .swiper-slide img{
+      height: 300px;width: auto;margin-bottom: 150px;
+    }
+    p.rosso{
+      color: #B71C1C;
+      position: absolute;
+      margin: 0 auto;
+      bottom: 10%;
+      width: 100%;
+      left: 0px;right: 0px;
+    }
+    h2{color: #ffffff;
+    font-size: 2rem;
+    position: absolute;
+    top: 2rem;
+    left: 0px;
+    right: 0px;
+    }
+    h3{
+      color: #ffffff;
+    font-size: 1.6rem;
+    position: absolute;
+    bottom: 18rem;
+    left: 0px;
+    right: 0px;
+    font-weight: 400;
+    }
+    
+   
+   
+   }
+   

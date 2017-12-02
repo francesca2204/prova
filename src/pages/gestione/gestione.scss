@@ -1,0 +1,29 @@
+page-gestione {
+
+    
+        display: block;
+    .hide{display: none;}
+    
+    .toolbar-background-md{background: linear-gradient(215deg, rgba(198,40,40,1) 0%, rgba(239,83,80,1) 100%);
+     /* w3c */}
+     .toolbar-title-md{color: #ffffff;}
+     .scroll-content{background-color: #FCF8F9}
+     .card-md{border-radius: 13px;}
+     .card-md ion-card-header{
+       border-bottom: solid 1px #EFEFEF;
+     }
+      .card-md ion-card-content{
+       border-bottom: solid 1px #EFEFEF;
+       padding: 0px;
+     }
+     .titolo{font-size: 16px;font-weight: bold;}
+     .padding{padding-top:15px;}
+     .numero{font-size: 18px;font-weight: bold; }
+     .ciotola{height: 65px;}
+     .centrato{text-align: center;margin: 0 auto}
+     .acqua.range-md .range-bar-active{background-color: #0071BC;}
+     .pappa.range-md .range-bar-active{background:#C1272D;}
+     .pappa div.range-knob{background:#C1272D;}
+    
+    .ion-item{font-size: 24px;}
+}
